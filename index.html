@@ -10,16 +10,22 @@
     <title>Weather</title>
 </head>
 <body>
-    <h3>Search for a City: </h3>
-    
-    <form id = "search-form">
-        <input type = "text" placeholder="Search..." id= "search-text-input"/>
-        <div id='button-holder'>
-          <img src="assets/searching-magnifying-glass.png" />
+    <div class = "row">
+        <div class = "col-5 bg-primary">
+            <h3 class = "search-header">Search for a City:</h3>
+            <div class = "input-group">
+                <input id ="city-input" class = "form" placeholder="Search...">
+                <div class = "input-group-append">
+                    <button id = "search-button" type="button" class="btn btn-primary">
+                        <i class = "fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-        </select>
-
-    </form>
+    </div>
     
+    <form id = "history">
+        <input class = "form-control" type = "text">
+    </form>
 </body>
 </html>
