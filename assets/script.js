@@ -30,7 +30,7 @@ var saveSearch = function(){
 //Create an API key & link to the url
 var cityWeatherApi= function(city){
     var apiKey = "3c08c223f7924790dbebee106b70e779"
-    var apiURL = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`
+    var apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`
 
     fetch(apiURL)
     .then(function(response){
@@ -78,7 +78,7 @@ var displayWeather = function(weather, searchCity){
 //Get the UV data
 var getUvIndex = function(lat,lon){
     var apiKey = "3c08c223f7924790dbebee106b70e779"
-    var apiURL = `http://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${lat}&lon=${lon}`
+    var apiURL = `https://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${lat}&lon=${lon}`
     fetch(apiURL)
     .then(function(response){
         response.json().then(function(data){
@@ -112,7 +112,7 @@ var displayUvIndex = function(index){
 }
 //5-day forecast API
 var fiveDayForecast = function(city){
-    var apiKey = "fc35fa1912b7054141f571765c8b2c4c"
+    var apiKey = "3c08c223f7924790dbebee106b70e779"
     var apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`
 
     fetch(apiURL)
@@ -138,7 +138,7 @@ var displayFiveDay = function(weather){
        // date and append to docoument 
        //create a timestamp
        var forecastDate = document.createElement("h3")
-       forecastDate.textContent= moment.unix(dailyForecast.dt).format("MMM dd, YYYY");
+       forecastDate.textContent= moment.unix(dailyForecast.dt).format("MMM D, YYYY");
        forecastDate.classList = "card-header text-center"
        forecastEl.appendChild(forecastDate);
 
