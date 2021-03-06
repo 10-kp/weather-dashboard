@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Weather Dashboard</title>
 </head>
@@ -14,14 +15,13 @@
 
     <div class = "row">
         <div class = "col-12 col-md-3 p-1 search-header">
-            <form class = "border p-1" id = "form-city-search">
+            <form class = "border p-3" id = "form-city-search">
                 <h3 class = "search-header">Search for a City:</h3>
                 <input id ="city" class = "form-input" placeholder="Search City...">
-                <button id = "search-button" type="submit" class="btn btn-primary">
+                <button id = "search-button" type="submit" class="btn">
                     <i class = "fas fa-search"></i>
                 </button>
             </form>
-
             <div id = "prev-search-buttons" class = "past-search border" ></div>
         </div>
         <div class="col-8 col-md-8">
@@ -38,9 +38,7 @@
         </div>
     </div>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src = "assets/script.js"></script>
 </body>
 </html>

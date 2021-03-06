@@ -3,8 +3,13 @@
 }
 
 .list-group-item{
-    line-height: 1;
+    line-height: 0.5px;
     border: solid;
+}
+
+.btn{
+    size: 10;
+    padding: 10px;   
 }
 
 .card-body{
@@ -12,7 +17,7 @@
 }
 
 span.favorable{
-    padding: 1.px;
+    padding: 1px;
     background-color: green;
     color:white;
 }
